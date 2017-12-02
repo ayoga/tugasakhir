@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="334.0" prefWidth="428.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="takhir.FXMLwelcomeController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="334.0" prefWidth="442.0" style="-fx-background-color: #007fff;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="29.0" prefWidth="304.0" text="Selamat Datang Pengguna !" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="104.0" prefHeight="22.0" prefWidth="151.0" text="Masuk Sebagai ?">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="297.0" layoutY="303.0" prefHeight="21.0" prefWidth="138.0" text="Penghitung parkiran" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="74.0" layoutX="366.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../TugasAkhir/src/gambar/88288-200.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="371.0" layoutY="64.0" prefHeight="21.0" prefWidth="59.0" text="Pengguna">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnadmin" layoutX="28.0" layoutY="154.0" onAction="#admin" prefHeight="59.0" prefWidth="177.0" style="-fx-background-color: white;" text="Admin" textFill="#007fff">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnNewUser" layoutX="238.0" layoutY="154.0" onAction="#NewUser" prefHeight="59.0" prefWidth="177.0" style="-fx-background-color: white;" text="New User" textFill="#007fff">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="Close" layoutX="18.0" layoutY="300.0" onAction="#Keluar" prefHeight="22.0" prefWidth="61.0" style="-fx-background-color: white;" text="Close" textFill="#0086c9">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#000000c4" />
+               </effect>
+            </JFXButton>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="586.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="takhir.FXMLChooseOpsiController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="384.0" prefWidth="566.0" style="-fx-background-color: #007fff;">
+         <children>
+            <JFXButton fx:id="delete" layoutX="302.0" layoutY="323.0" onAction="#hapus" prefHeight="22.0" prefWidth="102.0" style="-fx-background-color: white;" text="Delete">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#002affc4" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="Update" layoutX="418.0" layoutY="323.0" onAction="#Update" prefHeight="22.0" prefWidth="109.0" style="-fx-background-color: white;" text="Update">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#002affc4" />
+               </effect>
+            </JFXButton>
+            <Label layoutX="212.0" layoutY="14.0" prefHeight="31.0" prefWidth="181.0" text="List Pengguna" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="22.0" />
+               </font>
+            </Label>
+            <TableView fx:id="ListUser" layoutX="38.0" layoutY="52.0" prefHeight="262.0" prefWidth="489.0">
+               <columns>
+                  <TableColumn fx:id="namapengguna" prefWidth="151.0" text="Nama Pengguna" />
+                  <TableColumn fx:id="Password" prefWidth="110.0" text="Password" />
+                  <TableColumn fx:id="nokend" prefWidth="118.0" text="Nokend" />
+                  <TableColumn fx:id="telp" prefWidth="110.0" text="No.telp" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="Exit" layoutX="43.0" layoutY="350.0" onAction="#Keluar" prefHeight="22.0" prefWidth="102.0" style="-fx-background-color: white;" text="Exit" textFill="#0086c9">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#000000c4" />
+               </effect>
+            </JFXButton>
+            <Label layoutX="154.0" layoutY="351.0" prefHeight="21.0" prefWidth="138.0" text="Click for Exit ..." textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

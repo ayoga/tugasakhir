@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="413.0" prefWidth="271.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="takhir.FXMLdaftarController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="413.0" prefWidth="334.0">
+         <children>
+            <JFXButton fx:id="btnMasuk" layoutX="90.0" layoutY="305.0" onAction="#submit" prefHeight="22.0" prefWidth="206.0" style="-fx-background-color: #007fff;" text="Daftar" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnDaftar" layoutX="235.0" layoutY="334.0" onAction="#kelogin" prefHeight="22.0" prefWidth="61.0" style="-fx-background-color: #007fff;" text="Masuk" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <Label layoutX="115.0" layoutY="122.0" prefHeight="21.0" prefWidth="104.0" text="Silahkan daftar" textFill="#007fff">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="InUser" layoutX="31.0" layoutY="167.0" maxWidth="315.0" minWidth="204.0" prefHeight="35.0" prefWidth="273.0" promptText="Username" unFocusColor="#007fff">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="89.0" layoutY="337.0" prefHeight="17.0" prefWidth="138.0" text="Punya akun, Click masuk !" />
+            <ImageView fitHeight="84.0" fitWidth="87.0" layoutX="121.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../TugasAkhir/src/gambar/88288-200.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="11.0" layoutY="8.0" prefHeight="21.0" prefWidth="138.0" text="Penghitung parkiran" textFill="#868282">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="nokend" layoutX="31.0" layoutY="233.0" maxWidth="315.0" minWidth="204.0" prefHeight="35.0" prefWidth="273.0" promptText="No.Kendaraan" unFocusColor="#007fff">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="InPass" layoutX="32.0" layoutY="201.0" maxWidth="273.0" minWidth="260.0" prefHeight="31.0" prefWidth="273.0" promptText="Password" unFocusColor="#007fff" />
+            <Label fx:id="cek" layoutX="189.0" layoutY="11.0" prefHeight="35.0" prefWidth="132.0" />
+            <JFXButton fx:id="Back" layoutX="19.0" layoutY="376.0" onAction="#Back" prefHeight="22.0" prefWidth="61.0" style="-fx-background-color: white;" text="Back">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#000000c4" />
+               </effect>
+            </JFXButton>
+            <JFXTextField fx:id="telp" layoutX="30.0" layoutY="268.0" maxWidth="315.0" minWidth="204.0" prefHeight="35.0" prefWidth="273.0" promptText="telp" unFocusColor="#007fff">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

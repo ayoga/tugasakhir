@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="392.0" prefWidth="249.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="takhir.FXMLlogAdminController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="392.0" prefWidth="312.0">
+         <children>
+            <JFXButton fx:id="btnMasuk" layoutX="31.0" layoutY="315.0" onAction="#Masuk" prefHeight="22.0" prefWidth="257.0" style="-fx-background-color: #007fff;" text="Masuk" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <Label layoutX="87.0" layoutY="163.0" prefHeight="21.0" prefWidth="146.0" text="Silahkan masuk Admin" textFill="#007fff">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="InUser" layoutX="24.0" layoutY="242.0" maxWidth="315.0" minWidth="204.0" prefHeight="35.0" prefWidth="273.0" promptText="Username" unFocusColor="#007fff">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="96.0" fitWidth="90.0" layoutX="115.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../TugasAkhir/src/gambar/88288-200.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="12.0" layoutY="10.0" prefHeight="21.0" prefWidth="138.0" text="Penghitung parkiran" textFill="#868282">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="Pass" layoutX="24.0" layoutY="277.0" maxWidth="273.0" minWidth="273.0" prefHeight="31.0" prefWidth="273.0" promptText="Password" unFocusColor="#007fff" />
+            <Label fx:id="label" layoutX="160.0" layoutY="32.0" prefHeight="31.0" prefWidth="138.0" />
+            <JFXButton fx:id="Back" layoutX="23.0" layoutY="356.0" onAction="#Back" prefHeight="22.0" prefWidth="61.0" style="-fx-background-color: white;" text="Back">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#000000c4" />
+               </effect>
+            </JFXButton>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

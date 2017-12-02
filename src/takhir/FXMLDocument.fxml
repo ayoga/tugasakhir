@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="434.0" prefWidth="755.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="takhir.FXMLDocumentController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="434.0" prefWidth="755.0" style="-fx-background-color: #007fff;">
+         <children>
+            <AnchorPane layoutX="410.0" layoutY="10.0" prefHeight="413.0" prefWidth="334.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextField fx:id="inAn1" layoutX="129.0" layoutY="25.0" maxWidth="186.0" minWidth="143.0" prefHeight="31.0" prefWidth="186.0" />
+                  <JFXRadioButton fx:id="radio1" layoutX="119.0" layoutY="72.0" text="Lama Waktu">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="radio2" layoutX="119.0" layoutY="99.0" text="Banyak Brg">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="radio3" layoutX="119.0" layoutY="124.0" text="Jumlah Kendaraan">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Separator layoutY="187.0" prefHeight="5.0" prefWidth="334.0" />
+                  <Label layoutX="23.0" layoutY="30.0" text="Atas Nama :">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="153.0" text="Jmlh Uang :">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="inAn2" layoutX="129.0" layoutY="150.0" maxWidth="186.0" minWidth="143.0" prefHeight="31.0" prefWidth="186.0" />
+                  <Label layoutX="83.0" layoutY="69.0" text="Pilih :">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="195.0" layoutY="390.0" prefHeight="21.0" prefWidth="138.0" text="Penghitung parkiran">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnCetak" layoutX="130.0" layoutY="194.0" onAction="#cetak" prefHeight="22.0" prefWidth="86.0" style="-fx-background-color: #007fff;" text="Cetak" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="11.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnHapus" layoutX="223.0" layoutY="194.0" onAction="#hapus" prefHeight="22.0" prefWidth="86.0" style="-fx-background-color: #007fff;" text="Hapus" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="11.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </JFXButton>
+                  <JFXTextArea fx:id="HasilPesanan" layoutX="11.0" layoutY="223.0" maxWidth="319.0" minWidth="246.0" onDragDetected="#HasilPesanan" prefHeight="167.0" prefWidth="314.0" unFocusColor="WHITE">
+                     <effect>
+                        <DropShadow color="#c9c7c7" />
+                     </effect>
+                  </JFXTextArea>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <ImageView fitHeight="62.0" fitWidth="52.0" layoutX="23.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../TugasAkhir/src/gambar/unnamed.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="84.0" layoutY="28.0" prefHeight="36.0" prefWidth="269.0" text="Menu Kategori" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="WHITE" />
+               </effect>
+            </Label>
+            <Label layoutX="30.0" layoutY="110.0" text="Kategori :">
+               <font>
+                  <Font name="Berlin Sans FB" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="308.0" layoutY="112.0" text="Banyak :">
+               <font>
+                  <Font name="Berlin Sans FB" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="191.0" layoutY="112.0" text="Harga :">
+               <font>
+                  <Font name="Berlin Sans FB" size="23.0" />
+               </font>
+            </Label>
+            <JFXCheckBox fx:id="kat1" checkedColor="WHITE" layoutX="22.0" layoutY="146.0" onAction="#waktu" prefHeight="25.0" prefWidth="299.0" text="Lama Waktu" textFill="WHITE" unCheckedColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <Separator layoutX="85.0" layoutY="62.0" prefHeight="5.0" prefWidth="186.0" />
+            <JFXCheckBox fx:id="kat2" checkedColor="WHITE" layoutX="21.0" layoutY="181.0" onAction="#banyak" prefHeight="25.0" prefWidth="299.0" text="Banyak Brg" textFill="WHITE" unCheckedColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="kat3" checkedColor="WHITE" layoutX="22.0" layoutY="215.0" onAction="#kendaraan" prefHeight="25.0" prefWidth="299.0" text="Kendaraan" textFill="WHITE" unCheckedColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <Label fx:id="harga1" layoutX="193.0" layoutY="142.0" prefHeight="33.0" prefWidth="75.0" text="500 / jam" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="harga2" layoutX="192.0" layoutY="176.0" prefHeight="33.0" prefWidth="75.0" text="300 / brg" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="harga3" layoutX="192.0" layoutY="213.0" prefHeight="33.0" prefWidth="75.0" text="2.000 ,00" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="jumlah1" focusColor="WHITE" layoutX="310.0" layoutY="143.0" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="jumlah2" focusColor="WHITE" layoutX="310.0" layoutY="178.0" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="jumlah3" focusColor="WHITE" layoutX="311.0" layoutY="214.0" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+            <Separator layoutX="20.0" layoutY="248.0" prefHeight="5.0" prefWidth="365.0" />
+            <Label layoutX="250.0" layoutY="261.0" text="Total :" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="HasTotal" focusColor="WHITE" layoutX="311.0" layoutY="255.0" maxWidth="126.0" minWidth="75.0" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+            <JFXButton fx:id="btnTotal" layoutX="21.0" layoutY="260.0" onAction="#Total" prefHeight="22.0" prefWidth="216.0" style="-fx-background-color: white;" text="Total" textFill="#0086c9">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="Show" layoutX="15.0" layoutY="389.0" onAction="#tampil" prefHeight="22.0" prefWidth="129.0" style="-fx-background-color: white;" text="Show Data Admin" textFill="#0086c9">
+               <font>
+                  <Font name="Verdana Bold" size="11.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#000000c4" />
+               </effect>
+            </JFXButton>
+            <Label layoutX="154.0" layoutY="390.0" prefHeight="21.0" prefWidth="138.0" text="Click untuk melihat " textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
