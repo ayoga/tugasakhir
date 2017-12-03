@@ -73,20 +73,14 @@ public class FXMLloginController implements Initializable {
             ResultSet result = ps.executeQuery();
               if (result.next()) {
                 try {
-            // Hide this current window (if this is what you want)
             ((Node)(event.getSource())).getScene().getWindow().hide();
-            
-            // Load the new fxml
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("FXMLDocument.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 830, 450);
-            
-            // Create new stage (window), then set the new Scene
+            Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setTitle("anjas");
             stage.show();
-            
         } catch (IOException e) {
             System.out.println("Failed to create new Window." + e);
         }

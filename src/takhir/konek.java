@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package takhir;
-
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Driver;
 import java.sql.DriverManager;
@@ -13,10 +12,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Anjas
- */
 public class konek {
     private static Connection konek;
     Connection con;
@@ -25,7 +20,7 @@ public class konek {
     public void config (){
         try {
             Class.forName("com.mysqly.jdbc.Driver");
-            con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost/daftar", "root", "");
+            con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost/tugasakhir", "root", "");
             stm = con.createStatement();
         }catch (Exception e) {
             JOptionPane.showMessageDialog(null, "koneksi gagal "+e.getMessage());

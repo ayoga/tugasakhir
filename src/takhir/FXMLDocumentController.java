@@ -109,6 +109,7 @@ public class FXMLDocumentController implements Initializable {
         radio2.setSelected(false);
         radio3.setSelected(false);
         HasTotal.setText("");
+        menu = "";
     }
 
     @FXML

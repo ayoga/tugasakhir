@@ -9,6 +9,7 @@ import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -50,13 +51,13 @@ public class FXMLChooseOpsiController implements Initializable {
     @FXML
     private JFXButton Exit;
     @FXML
-    private TableColumn<tabelanggota, String> namapengguna;
+    private TableColumn<tabelanggota, String> namapengt;
     @FXML
-    private TableColumn<tabelanggota, String> Password;
+    private TableColumn<tabelanggota, String> Passt;
     @FXML
-    private TableColumn<tabelanggota, String> nokend;
+    private TableColumn<tabelanggota, String> nokendt;
     @FXML
-    private TableColumn<tabelanggota, String> telp;
+    private TableColumn<tabelanggota, String> telpt;
 
     /**
      * Initializes the controller class.
@@ -65,34 +66,6 @@ public class FXMLChooseOpsiController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    private void update(ActionEvent event) throws SQLException { {
-        
-         try {
-            data = FXCollections.observableArrayList();
-            // Execute query and store result in a resultset
-            ResultSet rs = stat.executeQuery("SELECT * FROM daftar");
-            while (rs.next()) {
-                //get string from db,whichever way 
-                data.add(new tabelanggota(rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5),rs.getString(6)));
-            }
-
-        } catch (SQLException ex) {
-            System.err.println("Error"+ex);
-        }
-        
-        //Set cell value factory to tableview.
-        //NB.PropertyValue Factory must be the same with the one set in model class.
-        namapengguna.setCellValueFactory(new PropertyValueFactory<>("username"));
-        Password.setCellValueFactory(new PropertyValueFactory<>("password"));
-        nokend.setCellValueFactory(new PropertyValueFactory<>("No_kendrn"));
-        telp.setCellValueFactory(new PropertyValueFactory<>("telp"));
-        
-        
-        ListUser.setItems(data);
-        
-    }
-    }
 
     @FXML
     private void Keluar(ActionEvent event) throws IOException {
@@ -117,6 +90,29 @@ public class FXMLChooseOpsiController implements Initializable {
 
     @FXML
     private void Update(ActionEvent event) {
+        try {
+            data = FXCollections.observableArrayList();
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/tugasakhir?zeroDate TimeBehavior=convertToNull", "root", "");
+            stat = connection.createStatement();
+            rs = stat.executeQuery("SELECT * FROM `daftar`");
+            while (rs.next()) {
+                //get string from db,whichever way 
+                data.add(new tabelanggota(rs.getString(1), rs.getString(2), rs.getString(3),rs.getString(4)));
+            }
+
+        } catch (SQLException ex) {
+            System.err.println("Error"+ex);
+        }
+        
+        //Set cell value factory to tableview.
+        //NB.PropertyValue Factory must be the same with the one set in model class.
+        namapengt.setCellValueFactory(new PropertyValueFactory<>("namapengguna"));
+        Passt.setCellValueFactory(new PropertyValueFactory<>("Password"));
+        nokendt.setCellValueFactory(new PropertyValueFactory<>("nokend"));
+        telpt.setCellValueFactory(new PropertyValueFactory<>("telp"));
+        
+        
+        ListUser.setItems(data);
     }
 
     

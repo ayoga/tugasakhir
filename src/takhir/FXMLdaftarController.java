@@ -102,16 +102,13 @@ public class FXMLdaftarController implements Initializable {
            JOptionPane.showMessageDialog(null,"Data success");
            try{
                ((Node) (event.getSource())).getScene().getWindow().hide();
-               
                FXMLLoader fxmlLoader = new FXMLLoader();
                fxmlLoader.setLocation(getClass().getResource("FXMLlogin.fxml"));
                Scene scene = new Scene(fxmlLoader.load());
-               
                Stage stage = new Stage();
                stage.setScene(scene);
                stage.setTitle("TNBTS");
                stage.show();
-           
         }catch(Exception e){
            System.out.println ("Failed to create new data" + e);
         }

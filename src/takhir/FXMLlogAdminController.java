@@ -74,7 +74,7 @@ public class FXMLlogAdminController implements Initializable {
             // Load the new fxml
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("FXMLChooseOpsi.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 830, 450);
+            Scene scene = new Scene(fxmlLoader.load());
             
             // Create new stage (window), then set the new Scene
             Stage stage = new Stage();

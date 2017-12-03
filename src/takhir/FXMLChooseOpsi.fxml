@@ -36,10 +36,10 @@
             </Label>
             <TableView fx:id="ListUser" layoutX="38.0" layoutY="52.0" prefHeight="262.0" prefWidth="489.0">
                <columns>
-                  <TableColumn fx:id="namapengguna" prefWidth="151.0" text="Nama Pengguna" />
-                  <TableColumn fx:id="Password" prefWidth="110.0" text="Password" />
-                  <TableColumn fx:id="nokend" prefWidth="118.0" text="Nokend" />
-                  <TableColumn fx:id="telp" prefWidth="110.0" text="No.telp" />
+                  <TableColumn fx:id="namapengt" prefWidth="151.0" text="Nama Pengguna" />
+                  <TableColumn fx:id="Passt" prefWidth="110.0" text="Password" />
+                  <TableColumn fx:id="nokendt" prefWidth="118.0" text="Nokend" />
+                  <TableColumn fx:id="telpt" prefWidth="110.0" text="No.telp" />
                </columns>
             </TableView>
             <JFXButton fx:id="Exit" layoutX="43.0" layoutY="350.0" onAction="#Keluar" prefHeight="22.0" prefWidth="102.0" style="-fx-background-color: white;" text="Exit" textFill="#0086c9">

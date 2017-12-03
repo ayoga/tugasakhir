@@ -20,10 +20,6 @@ public class tabelanggota {
         this.nokend = new SimpleStringProperty(nokend);
         this.telp = new SimpleStringProperty(telp);
     }
-
-    tabelanggota(String string, String string0, String string1, String string2, String string3) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     //getter
     public String getnamapengguna() {
